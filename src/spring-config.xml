@@ -4,9 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <bean id="triangle" class="jbrns.sprfrmwrk.Triangle">
-              <property name="pointA" ref="zeroPoint"/>
-              <property name="pointB" ref="point2"/>
-              <property name="pointC" ref="point3"/>
+              <property name="pointList">
+                     <list>
+                            <ref bean="zeroPoint"/>
+                            <ref bean="point2"/>
+                            <ref bean="point3"/>
+                     </list>
+              </property>
        </bean>
 
        <bean id="zeroPoint" class="jbrns.sprfrmwrk.Point">
