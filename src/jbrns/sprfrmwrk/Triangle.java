@@ -1,21 +1,14 @@
 package jbrns.sprfrmwrk;
 
 
-public class Triangle {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Triangle implements InitializingBean, DisposableBean{
 
     private Point pointA;
     private Point pointB;
     private Point pointC;
-/*
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("InitializingBean init method call for Triangle");
-    }
-
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("DisposableBean's destroy method call for Triangle");
-    }*/
 
     public void myInit() {
         System.out.println("My init method call for Triangle");
@@ -23,6 +16,17 @@ public class Triangle {
 
     public void myDestroy() {
         System.out.println("My destroy method call for Triangle");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("DisposableBean destroy method call for Triangle");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("InitializingBean init method call for Triangle");
+
     }
 
     public void draw() {
