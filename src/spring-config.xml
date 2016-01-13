@@ -4,17 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-       <bean id="parenttriangle" class="jbrns.sprfrmwrk.Triangle">
-              <property name="pointA" ref="pointA"/>
-       </bean>
+       <bean id="triangle" class="jbrns.sprfrmwrk.Triangle" autowire="byName"
+             init-method="myInit" destroy-method="myDestroy">
 
-       <bean id="triangle" class="jbrns.sprfrmwrk.Triangle" parent="parenttriangle">
-              <property name="pointB" ref="pointB"/>
-              <property name="pointC" ref="pointC"/>
-       </bean>
-
-       <bean id="triangle2" class="jbrns.sprfrmwrk.Triangle" parent="parenttriangle">
-              <property name="pointB" ref="pointB"/>
        </bean>
 
        <bean id="pointA" class="jbrns.sprfrmwrk.Point">

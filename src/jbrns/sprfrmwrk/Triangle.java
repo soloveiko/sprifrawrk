@@ -1,19 +1,28 @@
 package jbrns.sprfrmwrk;
 
 
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContext;
-
-public class Triangle implements  BeanNameAware {
+public class Triangle {
 
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private ApplicationContext context = null;
+/*
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("InitializingBean init method call for Triangle");
+    }
 
     @Override
-    public void setBeanName(String beanName) {
-        System.out.println("Bean name is " + beanName);
+    public void destroy() throws Exception {
+        System.out.println("DisposableBean's destroy method call for Triangle");
+    }*/
+
+    public void myInit() {
+        System.out.println("My init method call for Triangle");
+    }
+
+    public void myDestroy() {
+        System.out.println("My destroy method call for Triangle");
     }
 
     public void draw() {
