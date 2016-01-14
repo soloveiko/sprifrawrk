@@ -2,7 +2,7 @@ package jbrns.sprfrmwrk;
 
 
 
-public class Triangle {
+public class Triangle implements Shape{
 
     private Point pointA;
     private Point pointB;
