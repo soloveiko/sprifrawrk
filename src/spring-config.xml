@@ -10,7 +10,7 @@
      <bean id="triangle" class="jbrns.sprfrmwrk.Triangle">
             <property name="pointA" ref="pointA"/>
             <property name="pointB" ref="pointB"/>
-            <property name="pointC" ref="pointC"/>
+            <!--<property name="pointC" ref="pointC"/>-->
      </bean>
 
     <bean id="pointA" class="jbrns.sprfrmwrk.Point">
@@ -24,7 +24,7 @@
         <property name="y" value="0"/>
     </bean>
 
-    <bean id="pointC" class="jbrns.sprfrmwrk.Point">
+    <bean id="center" class="jbrns.sprfrmwrk.Point">
         <property name="x" value="20"/>
         <property name="y" value="0"/>
     </bean>
